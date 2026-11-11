@@ -11,26 +11,24 @@
 - 起点线路 + 一次换乘，逐段用真实时刻表算时间
 - 输出：总图（等时面 + 站点 + 片区名）、核心区放大图、站点明细 CSV、GeoJSON、Shapefile（WGS84）
 
-## 安装成 skill（推荐）
+## 安装
 
-这是一个 **skill**，不是插件——不需要 `dsh plugin add`。
-DSH 会从下面这些目录扫描含 `SKILL.md` 的文件夹：
+这是一个 **skill**：一个装着 `SKILL.md` 的文件夹，没有编译、没有依赖注入、不是插件包。
+任何支持 Agent Skills 约定的 agent 都能直接用（Claude Code / Cursor / Codex / DSH / 自建 agent 都行）。
 
-| 作用域 | 路径 |
-|---|---|
-| 用户级（所有工作区） | `~/.dsh/skills/<name>/SKILL.md` |
-| 用户级（agents 约定） | `~/.agents/skills/<name>/` |
-| 项目级 | `<项目根>/.dsh/skills/<name>/` |
-| 项目级（agents 约定） | `<项目根>/.agents/skills/<name>/` |
+三种用法，任选其一：
 
-所以安装就是把它放进去：
+1. **放进 skills 目录**——把整个文件夹拷到你的 agent 扫描 skills 的位置（各家路径不同，
+   通常是 `~/.<agent>/skills/` 或项目下的 `.skills/`），保证 `SKILL.md` 在该文件夹根目录。
+2. **当系统提示**——直接把 `SKILL.md` 的内容贴进系统提示或项目规则文件（如 `AGENTS.md`、`.cursorrules`）。
+3. **纯手工**——`SKILL.md` 就是一份操作说明，人照着敲命令也行。
 
-```powershell
-git clone https://github.com/KochiyaSrU/bjbus-reach-map "$env:USERPROFILE\.dsh\skills\bjbus-reach-map"
+```bash
+git clone https://github.com/KochiyaSrU/bjbus-reach-map.git
 ```
 
-或者手动复制文件夹（保证 `SKILL.md` 在该文件夹根下）。放好后重开一次会话，
-技能列表里就会出现 `bjbus-reach-map`。
+装好后 agent 看到的是：什么时候该用它、怎么一条命令出图、以及 13 类会踩的坑。
+`reference/PROCESS.md` 是完整踩坑记录，改代码前值得读一遍。
 
 ## 一条命令
 

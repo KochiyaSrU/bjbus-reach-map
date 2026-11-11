@@ -85,6 +85,13 @@ python scripts/selfcheck.py "<交付目录>"
 - `SKILL.md` —— 给 AI agent 读的执行说明（流程、规则表、坑）
 - `reference/PROCESS.md` —— 完整踩坑记录，改代码前必读
 
+## 作者
+
+**极地东风谷（KochiyaSrU）** — https://github.com/KochiyaSrU
+
+数据来自 bjbus MCP（https://bjbus.jinzihao.me/sse），底图 © Esri, HERE, Garmin, OpenStreetMap contributors。
+
 ## License
 
 MIT
+

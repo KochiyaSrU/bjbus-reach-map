@@ -11,6 +11,27 @@
 - 起点线路 + 一次换乘，逐段用真实时刻表算时间
 - 输出：总图（等时面 + 站点 + 片区名）、核心区放大图、站点明细 CSV、GeoJSON、Shapefile（WGS84）
 
+## 安装成 skill（推荐）
+
+这是一个 **skill**，不是插件——不需要 `dsh plugin add`。
+DSH 会从下面这些目录扫描含 `SKILL.md` 的文件夹：
+
+| 作用域 | 路径 |
+|---|---|
+| 用户级（所有工作区） | `~/.dsh/skills/<name>/SKILL.md` |
+| 用户级（agents 约定） | `~/.agents/skills/<name>/` |
+| 项目级 | `<项目根>/.dsh/skills/<name>/` |
+| 项目级（agents 约定） | `<项目根>/.agents/skills/<name>/` |
+
+所以安装就是把它放进去：
+
+```powershell
+git clone https://github.com/KochiyaSrU/bjbus-reach-map "$env:USERPROFILE\.dsh\skills\bjbus-reach-map"
+```
+
+或者手动复制文件夹（保证 `SKILL.md` 在该文件夹根下）。放好后重开一次会话，
+技能列表里就会出现 `bjbus-reach-map`。
+
 ## 一条命令
 
 ```bash

@@ -14,7 +14,7 @@
 ## 安装
 
 这是一个 **skill**：一个装着 `SKILL.md` 的文件夹，没有编译、没有依赖注入、不是插件包。
-任何支持 Agent Skills 约定的 agent 都能直接用（Claude Code / Cursor / Codex / DSH / 自建 agent 都行）。
+任何支持 Agent Skills 约定的 agent 都能直接用（Claude Code、Cursor、Codex 或自建 agent 都行）。
 
 三种用法，任选其一：
 

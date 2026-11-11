@@ -1,0 +1,25 @@
+# cache and artefacts
+cache/
+tiles/
+work/
+*.log
+__pycache__/
+*.pyc
+
+# generated maps
+*.png
+!examples/*.png
+*.csv
+*.geojson
+*.shp
+*.shx
+*.dbf
+*.prj
+*.cpg
+*.sbn
+*.sbx
+*.xml
+
+# os
+.DS_Store
+Thumbs.db

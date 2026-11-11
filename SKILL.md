@@ -197,3 +197,7 @@ call("query_routes_at_stop", {"stop_name": "西苑"})
 2. CSV / GeoJSON / DBF / SHP 记录数一致
 3. `qa_offset.py` 打印 `OK`（若打印 `SKIPPED`，说明底图缺失，等于没验）
 4. 图上：标签不互压、不压圆点、不被画框裁、比例尺不压内容、起点框不遮挡
+
+---
+
+作者：极地东风谷（KochiyaSrU）
